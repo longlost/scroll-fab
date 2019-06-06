@@ -1,6 +1,6 @@
 {
   "name": "@spriteful/scroll-fab",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This fab enters after page has been scrolled a bit, smoothly scrolls window back to top when clicked",
   "main": "scroll-fab.js",
   "scripts": {

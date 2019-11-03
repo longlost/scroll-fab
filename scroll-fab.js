@@ -1,14 +1,14 @@
 
 import {
-  SpritefulElement, 
+  AppElement, 
   html
-}                 from '@spriteful/spriteful-element/spriteful-element.js';
-import {listen}   from '@spriteful/utils/utils.js';
+}                 from '@longlost/app-element/app-element.js';
+import {listen}   from '@longlost/utils/utils.js';
 import htmlString from './scroll-fab.html';
-import '@spriteful/app-icons/app-icons.js';
+import '@longlost/app-icons/app-icons.js';
 
 
-class ScrollFab extends SpritefulElement {
+class ScrollFab extends AppElement {
   static get is() { return 'scroll-fab'; }
 
   static get template() {

@@ -1,6 +1,6 @@
 {
   "name": "@longlost/scroll-fab",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "This fab enters after page has been scrolled a bit, smoothly scrolls window back to top when clicked",
   "main": "scroll-fab.js",
   "scripts": {
@@ -17,17 +17,15 @@
   },
   "homepage": "https://github.com/longlost/scroll-fab#readme",
   "dependencies": {
-    "@longlost/app-element": "^2.0.0",
-    "@longlost/app-icons": "^1.0.12",
-    "@polymer/paper-fab": "^3.0.1",
-    "scroll-behavior-polyfill": "^2.0.13"
+    "@longlost/app-core": "^9.0.1",
+    "@polymer/paper-fab": "^3.0.1"
   },
   "devDependencies": {
     "@polymer/iron-demo-helpers": "^3.1.0",
     "@polymer/test-fixture": "^4.0.2",
-    "@webcomponents/webcomponentsjs": "^2.5.0",
-    "chai": "^4.2.0",
-    "mocha": "^8.2.1",
+    "@webcomponents/webcomponentsjs": "^2.6.0",
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
     "wct-mocha": "^1.1.0"
   }
 }

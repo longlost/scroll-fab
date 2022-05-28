@@ -18,17 +18,18 @@
   **/
 
 
-import {AppElement, html} from '@longlost/app-element/app-element.js';
-import htmlString         from './scroll-fab.html';
-import '@longlost/app-icons/app-icons.js';
+import {AppElement} from '@longlost/app-element/app-element.js';
+import template     from './scroll-fab.html';
+import '@longlost/app-core/app-icons.js';
 import '@polymer/paper-fab/paper-fab.js';
 
 
 class ScrollFab extends AppElement {
+
   static get is() { return 'scroll-fab'; }
 
   static get template() {
-    return html([htmlString]);
+    return template;
   }
 
 
@@ -43,16 +44,8 @@ class ScrollFab extends AppElement {
 
 
   async connectedCallback() {
-    super.connectedCallback();
 
-    // Scroll options polyfill for Safari, supports {behavior: 'smooth'}
-    // for all scroll functions (ie. window.scrollTo, element.scrollIntoVeiw).
-    if (!('scrollBehavior' in document.documentElement.style)) {
-      await import(
-        /* webpackChunkName: 'scroll-polyfill' */ 
-        'scroll-behavior-polyfill'
-      );
-    }
+    super.connectedCallback();
 
     const callback = ([entry]) => {
       
@@ -85,6 +78,7 @@ class ScrollFab extends AppElement {
 
 
   disconnectedCallback() {
+
     super.disconnectedCallback();
 
     if (this._observer) {      
@@ -95,6 +89,7 @@ class ScrollFab extends AppElement {
 
 
   async __scrollToTopFabClicked() {
+    
     try {
       await this.clicked();
 
